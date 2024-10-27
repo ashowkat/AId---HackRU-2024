@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AId Mental Health Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Times New Roman', serif;">
+
+    <header>
+        <h1 style="color: purple;">A.I.d</h1>
+        <img src="paws.png" alt="Source: https://pngtree.com/freepng/black-bear-paw-prints_6083126.html" width="170" height="170" />
+        <img src="cat.png" alt="Source: https://www.shutterstock.com/search/black-cat-cartoon-png" width="100" height="175" />
+        <p>Welcome to AId! This is a website designed to help you manage your mental health. We have provided resources you can use, a manifestation list to itemize affirmations, and our AI chatbox to help guide you through your thoughts and emotions.</p>
+    </header>
+
+    <main>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#manifestations">Manifestations</a></li>
+                <li><a href="#chatbot">Chatbot</a></li>
+            </ul>
+        </nav>
+
+        <!-- Manifestation Section -->
+        <section id="manifestations">
+            <h2>Manifestations</h2>
+            <p>Add your affirmations to the list!</p>
+            <input type="text" id="itemInput" placeholder="Enter an item">
+            <button onclick="addItem()">Add Item</button>
+            <ul id="itemList"></ul>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot">
+            <h2>AI Chatbox</h2>
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box">
+                    <div class="message bot-message">Hello! How can I help you today?</div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Type your message here..." />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources">
+            <h3>Resources</h3>
+            <b>Hotlines:</b>
+            <p>Suicide and Crisis Hotline: 988</p>
+            <p>National Sexual Assault Hotline: (800)-656-4673</p>
+            <p>Substance Abuse and Mental Health Hotline: (800)-662-4357</p>
+            <b>Websites:</b>
+            <ul>
+                <li><a href="https://mhanational.org">Mental Health America</a></li>
+                <li><a href="https://www.ptsd.va.gov">National Center for PTSD</a></li>
+                <li><a href="https://www.samhsa.gov">Substance Abuse and Mental Health Services</a></li>
+                <li><a href="https://rainn.org/resources">Sexual Assault 24/7 Support</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Copyright 2024 AAAX.</p>
+    </footer>
+
+    <!-- JavaScript for Adding Manifestation Items -->
+    <script>
+        function addItem() {
+            const itemInput = document.getElementById("itemInput");
+            const itemText = itemInput.value;
+            if (itemText.trim() !== "") {
+                const li = document.createElement("li");
+                li.textContent = itemText;
+                document.getElementById("itemList").appendChild(li);
+                itemInput.value = "";
+            } else {
+                alert("Please enter an item.");
+            }
+        }
+    </script>
+
+    <!-- JavaScript for Chatbot -->
+    <script src="chatbotscript.js"></script>
+</body>
+</html>
+
+
+
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html style="font-family: 'Times New Roman', serif;">
+<font size ="16" color = "purple">
+A.I.d
+</font>
+
+
+<img src="paws.png" alt="Source: https://pngtree.com/freepng/black-bear-paw-prints_6083126.html"
+     width="200" 
+     height="200" />
+<img src="cat.png" alt="Source: https://www.shutterstock.com/search/black-cat-cartoon-png"
+     width="200" 
+     height="300" />
+<link rel="stylesheet" href="style.css">
+
+<p> Welcome to AId! This is a website desgined to help you manage your mental health. We have provided resources that you can use when necessary. 
+    There is a manifestation list where you can itemize your affirmations and keep track of them. Finally, the best feature of this website is our AI chatbox.
+    You can use to chatbox to seek out advice, communicate your thoughts with, and learn new ways to care for your emotions. Explore this website to guide yourself through your feelings, choices, thoughts, stress, and much more! </p>
+</head>
+    <main>
+<section id="intro">
+<div class="Container">
+</div>
+<div class="container">
+    <nav class="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#manifestations">Manifestations</a></li>
+            <li><a href="#chatbot">Chatbot</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+</section>
+
+<body>
+    <section>
+<h1>Manifestations</h1>
+<p> Add your affirmations into the list!</p>
+Input form for the user to enter items 
+<input type="text" id="itemInput" placeholder="Enter an item">
+<button onclick="addItem()">Add Item</button>
+
+ Unordered list where items will appear
+<ul id="itemList"></ul>
+
+
+JavaScript to handle adding items 
+<script>
+function addItem() {
+// Get the value from the input field
+const itemInput = document.getElementById("itemInput");
+const itemText = itemInput.value;
+
+
+// Check if the input is not empty
+if (itemText.trim() !== "") {
+// Create a new list item (li) element
+const li = document.createElement("li");
+li.textContent = itemText; // Set the text of the list item
+
+
+// Add the new list item to the unordered list
+document.getElementById("itemList").appendChild(li);
+
+
+// Clear the input field
+itemInput.value = "";
+} else {
+alert("Please enter an item.");
+}
+}
+function deleteItem(button){
+const listItem = button.parentElement;
+listItem.remove();
+}
+</script>
+
+</head>
+</section>
+
+<section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">Hello! How can I help you today?</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="chatbotscript.js"></script>
+</body>
+</section>
+
+
+<section>
+<h3>Resources</h3>
+<b>Hotlines: </b>
+<p> Suicide and Crisis Hotline: 988</p>
+<p> National Sexual Assault Hotline: (800)-656-4673</p>
+<p> Substance Abuse and Mental Health Hotline: (800)-662-4357</p>
+<b> Websites: </b>
+<nav>
+<ul>
+<li><a href="https://mhanational.org">Mental Health America</a></li>
+<li><a href="https://www.ptsd.va.gov">National Center for PTSD</a></li>
+<li><a href="https://www.samhsa.gov">Substance Abuse and Mental Health Services</a></li>
+<li><a href="https://rainn.org/resources">Sexual Assault 24/7 Support</a></li>
+</ul>
+</nav>
+</section>
+
+</main>
+<footer>
+<p>© Copyright 2024 AAAX.</p>
+</footer>
+</body>
+</html>-->

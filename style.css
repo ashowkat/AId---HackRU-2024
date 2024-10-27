@@ -1,0 +1,82 @@
+/* Page background color */
+body {
+    background-color: #e0f7fa;  /* Light blue color */
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for sections */
+section {
+    margin: 20px 0;  /* Adds space between sections */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for header and footer */
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0ff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Aligning and styling the navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Manifestation section styling */
+#manifestations {
+    text-align: center;
+}
+
+#itemInput, #itemList, button {
+    margin-top: 10px;
+}
+
+/* Chatbox styling */
+.chat-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Resource section styling */
+#resources ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+}
